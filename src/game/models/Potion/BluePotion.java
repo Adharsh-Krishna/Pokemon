@@ -1,4 +1,11 @@
 package game.models.Potion;
 
-public class BluePotion {
+import game.Constants;
+
+public class BluePotion extends Potion {
+
+    public BluePotion() {
+        this.name = Constants.BLUE_POTION;
+        this.multiplier = 2;
+    }
 }
