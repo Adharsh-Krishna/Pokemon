@@ -1,5 +1,6 @@
 package game.models.Pokemon;
 
+import game.AdvantageMapper.AdvantageMapper;
 import game.factories.PotionFactory;
 import game.models.Ability.Ability;
 import game.factories.AttackFactory;
@@ -52,7 +53,9 @@ public abstract class Pokemon {
             System.out.println(this.name + " is Dead.");
             return;
         }
-        boolean hasAdvantage = this.ability.advantageMapper.hasAdvantageOver(this, pokemon);
+        AdvantageMapper advantageMapper = new AdvantageMapper().getSingletonInstance();
+        boolean hasAdvantage = advantageMapper.hasAdvantageOver(this, pokemon);
+
         AttackFactory attackFactory = new AttackFactory().getSingletonInstance();
         attackFactory.getAttackByName(name).attack(pokemon, hasAdvantage);
     }
