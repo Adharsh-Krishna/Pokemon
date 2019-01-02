@@ -1,5 +1,6 @@
 package game.models.Pokemon;
 
+import game.factories.PotionFactory;
 import game.models.Ability.Ability;
 import game.factories.AttackFactory;
 
@@ -58,6 +59,11 @@ public abstract class Pokemon {
 
     public boolean isDead() {
         return this.currentHealth <= 0;
+    }
+
+    public void heal(String potionName) {
+        PotionFactory potionFactory = new PotionFactory().getSingletonInstance();
+        potionFactory.getPotionByName(potionName).heal(this);
     }
 
     @Override
