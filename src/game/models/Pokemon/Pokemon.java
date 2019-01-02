@@ -10,7 +10,8 @@ public abstract class Pokemon {
     Ability ability;
     int level;
     private List<String> attacks;
-    int health;
+    int maximumHealth;
+    int currentHealth;
 
     public String getName() {
         return this.name;
@@ -29,26 +30,30 @@ public abstract class Pokemon {
     }
 
 
-    public int getHealth() {
-        return health;
+    public int getCurrentHealth() {
+        return currentHealth;
     }
 
-    public void setHealth(int health) {
-        this.health = health;
+    public void setCurrentHealth(int currentHealth) {
+        this.currentHealth = currentHealth;
     }
 
     public void attack(String name, Pokemon pokemon) {
+        if (pokemon.isDead()) {
+            System.out.println(this.name + " is Dead.");
+            return;
+        }
         boolean hasAdvantage = this.ability.advantageMapper.hasAdvantageOver(this, pokemon);
         AttackFactory attackFactory = new AttackFactory().getSingletonInstance();
         attackFactory.getAttackByName(name).attack(pokemon, hasAdvantage);
     }
 
     public boolean isDead() {
-        return this.health < 0;
+        return this.currentHealth <= 0;
     }
 
     @Override
     public String toString() {
-        return "Pokemon Name : " + this.name + ", Health : " + this.health;
+        return "Pokemon Name : " + this.name + ", Health : " + this.currentHealth;
     }
 }

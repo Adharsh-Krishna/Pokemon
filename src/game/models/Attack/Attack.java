@@ -8,12 +8,12 @@ public abstract class Attack {
     protected double intensity;
 
     public void attack(Pokemon pokemon, boolean hasAdvantage){
-        int currentHealth = pokemon.getHealth();
-        int newHealth = (int)(hasAdvantage ? (this.intensity * currentHealth) * 2 : (this.intensity * currentHealth));
-        pokemon.setHealth(currentHealth - newHealth);
+        int currentHealth = pokemon.getCurrentHealth();
+        int reducedHealth = (int)(hasAdvantage ? Math.ceil(this.intensity * currentHealth) * 2 : Math.ceil(this.intensity * currentHealth));
+        pokemon.setCurrentHealth(currentHealth - reducedHealth);
         System.out.println(pokemon.toString());
         if (pokemon.isDead()) {
-            System.out.println(pokemon.getName() + "is Dead.");
+            System.out.println(pokemon.getName() + " is Dead.");
         }
     }
 }
