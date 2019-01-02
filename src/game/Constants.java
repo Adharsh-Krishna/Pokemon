@@ -7,4 +7,5 @@ public interface Constants {
     String DASH = "Dash";
     String THUNDER_SHOCK = "ThunderShock";
     String BLAZE = "Blaze";
+    int HEALTH_MULTIPLIER = 10;
 }

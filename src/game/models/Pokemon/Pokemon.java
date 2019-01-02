@@ -13,6 +13,14 @@ public abstract class Pokemon {
     int maximumHealth;
     int currentHealth;
 
+    public void setMaximumHealth(int maximumHealth) {
+        this.maximumHealth = maximumHealth;
+    }
+
+    public int getMaximumHealth() {
+        return maximumHealth;
+    }
+
     public String getName() {
         return this.name;
     }

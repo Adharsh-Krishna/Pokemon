@@ -1,5 +1,6 @@
 package game.models.Pokemon;
 
+import game.Constants;
 import game.models.Ability.ElectricAbility;
 
 public class ElectricPokemon extends Pokemon {
@@ -9,6 +10,7 @@ public class ElectricPokemon extends Pokemon {
         this.ability = new ElectricAbility();
         this.level = level;
         this.ability.unlockAttacksFor(this);
-        this.currentHealth = this.level * 10;
+        this.setCurrentHealth(Constants.HEALTH_MULTIPLIER);
+        this.setMaximumHealth(Constants.HEALTH_MULTIPLIER);
     }
 }
