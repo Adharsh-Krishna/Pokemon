@@ -8,4 +8,7 @@ public interface Constants {
     String THUNDER_SHOCK = "ThunderShock";
     String BLAZE = "Blaze";
     int HEALTH_MULTIPLIER = 10;
+    String BLUE_POTION = "Blue Potion";
+    String RED_POTION = "Red Potion";
+    String CRYSTAL_POTION = "Crystal Potion";
 }
