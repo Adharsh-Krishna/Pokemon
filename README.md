@@ -40,3 +40,15 @@
 - has a repository of Potions of all abilities.
 - uses a singleton pattern.
 - returns the appropriate Potion when its name is provided.
+
+## Attack Unlocker :
+
+- unlocks attacks for a given Pokemon based on its levels.
+- has a mapping of Pokemon Level to Attacks.
+- has a set of child attack unlockers based on the Pokemon Ability.
+
+## Advantage Mapper :
+
+- follows a singleton pattern.
+- has a mapping of Ability and its advantage over other Abilities.
+- used to determine the attack effect on a given Pokemon.
