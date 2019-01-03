@@ -6,6 +6,7 @@ public interface Constants {
     String ELECTRIC = "ELECTRIC";
     String DASH = "Dash";
     String THUNDER_SHOCK = "ThunderShock";
+    String WATER_GUN = "WaterGun";
     String BLAZE = "Blaze";
     int HEALTH_MULTIPLIER = 10;
     String BLUE_POTION = "Blue Potion";
