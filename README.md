@@ -21,3 +21,8 @@
 
 - represents a Potion a Pokemon can use to heal itself.
 - has Name and Multiplier as its attributes.
+
+### Breeder :
+
+- represents a Breeder who collects Pokemons.
+- has Name, Pokemons and Potions as its attributes.
