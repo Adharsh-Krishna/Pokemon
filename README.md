@@ -1,7 +1,8 @@
 # Pokemon-OOP
 
-### An Object Oriented Approach to the Pokemon World to demonstrate the OOP concepts and SOLID principles in action.
+## An Object Oriented Approach to the Pokemon World to demonstrate the OOP concepts and SOLID principles in action.
 
+## Models
 ### Pokemon :
 
 - represents a real world Pokemon.
@@ -26,3 +27,16 @@
 
 - represents a Breeder who collects Pokemons.
 - has Name, Pokemons and Potions as its attributes.
+
+## Factories
+### Attack Factory :
+
+- has a repository of Attacks of all abilities.
+- uses a singleton pattern.
+- returns the appropriate Attack when its name is provided.
+
+### Potion Factory :
+
+- has a repository of Potions of all abilities.
+- uses a singleton pattern.
+- returns the appropriate Potion when its name is provided.
