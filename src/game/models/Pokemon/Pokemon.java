@@ -1,7 +1,6 @@
 package game.models.Pokemon;
 
 import game.AdvantageMapper.AdvantageMapper;
-import game.factories.PotionFactory;
 import game.models.Ability.Ability;
 import game.factories.AttackFactory;
 
@@ -60,13 +59,14 @@ public abstract class Pokemon {
         attackFactory.getAttackByName(name).attack(pokemon, hasAdvantage);
     }
 
-    public boolean isDead() {
-        return this.currentHealth <= 0;
+    public void listAttacks() {
+        for(String attackName: this.attacks) {
+            System.out.println(attackName);
+        }
     }
 
-    public void heal(String potionName) {
-        PotionFactory potionFactory = new PotionFactory().getSingletonInstance();
-        potionFactory.getPotionByName(potionName).heal(this);
+    public boolean isDead() {
+        return this.currentHealth <= 0;
     }
 
     @Override
