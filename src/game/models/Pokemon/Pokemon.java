@@ -8,12 +8,12 @@ import game.factories.AttackFactory;
 import java.util.List;
 
 public abstract class Pokemon {
-    String name;
-    Ability ability;
-    int level;
+    protected String name;
+    protected Ability ability;
+    protected int level;
+    protected int maximumHealth;
+    protected int currentHealth;
     private List<String> attacks;
-    int maximumHealth;
-    int currentHealth;
 
     public void setMaximumHealth(int maximumHealth) {
         this.maximumHealth = maximumHealth;
